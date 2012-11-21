@@ -1,14 +1,13 @@
 require "spec_helper"
 
 describe ImagesController, :type => :routing do
-  let!(:name) { Digest::SHA1.hexdigest(FactoryGirl.attributes_for(:image)[:data]) }
-  let(:format) { "png" }
+  let!(:image) { FactoryGirl.create(:image) }
 
-  it '/:id.:format is routable' do
-    {:get => image_path(name: name, format: format)}.should be_routable
+  it '/:name.:format is routable' do
+    {get: image_path(name: image.name, format: image.format)}.should be_routable
   end
 
-  it '/create is routable' do
-    {:post => images_path}.should be_routable
+  it '/upload.cgi is routable' do
+    {post: images_path}.should be_routable
   end
 end
