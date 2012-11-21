@@ -1,0 +1,8 @@
+defaults: &defaults
+  rgyazo_id: development
+development:
+  <<: *defaults
+test:
+  <<: *defaults
+production:
+  rgyazo_id: <%= ENV["RGYZO_ID"] %>
