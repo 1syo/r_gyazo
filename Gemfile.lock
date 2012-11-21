@@ -6,6 +6,13 @@ GIT
       grit (>= 2.4.0)
       rails (>= 3.0.0)
 
+GIT
+  remote: git://github.com/machida/bootstrap-sass.git
+  revision: 0c06fa390059631830f21e25b194f2f105602eaa
+  branch: master
+  specs:
+    bootstrap-sass (2.1.0.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -212,6 +219,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass!
   capybara
   coffee-rails (~> 3.2.1)
   configatron
