@@ -1,5 +1,14 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      image:
+        url: url
+        created_at: created_at
+  helpers:
+    submit:
+      destroy: destroy
+  views:
+    titles:
+      confirm: confirm
+    messages:
+      confirm: Are you sure?

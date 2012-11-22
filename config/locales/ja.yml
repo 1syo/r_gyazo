@@ -1,0 +1,14 @@
+ja:
+  activerecord:
+    attributes:
+      image:
+        url: URL
+        created_at: 作成日
+  helpers:
+    submit:
+      destroy: 削除する
+  views:
+    titles:
+      confirm: 確認
+    messages:
+      confirm: 本当に削除しますか?
