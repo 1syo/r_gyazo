@@ -9,6 +9,7 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', :platforms => :ruby
   gem 'uglifier', '>= 1.0.3'
+  gem 'bootstrap-sass', :git => "git://github.com/machida/bootstrap-sass.git", branch: 'master'
 end
 
 gem 'jquery-rails'
@@ -17,6 +18,7 @@ gem 'kaminari'
 gem 'quiet_assets'
 gem 'dbname', :git => 'git://github.com/1syo/dbname.git'
 gem 'configatron'
+gem 'rails-i18n'
 
 group :production do
   gem 'thin'

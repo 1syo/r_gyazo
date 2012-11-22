@@ -10,6 +10,6 @@ describe ImagesController do
     page.driver.browser.post images_url, {id: rgyazo_id, imagedata: imagedata}
   end
 
-  it { page.status_code.should eq 302 }
-  it { page.response_headers["Location"].should match /#{Capybara.current_host}\/[0-9a-zA-Z]{6}.png/ }
+  it { page.status_code.should eq 200 }
+  it { page.body.should match /#{Capybara.current_host}\/[0-9a-zA-Z]{6}.png/ }
 end

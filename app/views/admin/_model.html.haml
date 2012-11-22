@@ -1,0 +1,9 @@
+%div{id: "destroy_modal_#{image.id}", class: "modal hide fade"}
+  .modal-header
+    %button.close{"type"=>"button", "data-dismiss"=>:modal, "aria-hidden"=>true} &times;
+    %h3=t("views.messages.confirm")
+  .modal-body
+    %p=image_path(only_path: false, name: image.name, format: image.format)
+  .modal-footer
+    =link_to 'Close', "#", class: 'btn', "data-dismiss"=>:modal, "aria-hidden"=>true
+    =link_to t("helpers.submit.destroy"), admin_path(image), method: :delete, class: 'btn btn-danger'

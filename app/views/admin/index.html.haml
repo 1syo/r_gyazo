@@ -1,0 +1,16 @@
+=render 'notice', notice: flash[:notice]
+%table.table-striped
+  %thead
+    %tr
+      %th.images_url=t('activerecord.attributes.image.url')
+      %th.images_createed_at=t('activerecord.attributes.image.created_at')
+      %th.images_action
+  %tbody
+    -@images.each do |image|
+      %tr
+        %td=link_to nil,image_path(only_path: false, name: image.name, format: image.format)
+        %td=l image.created_at
+        %td=link_to t("helpers.submit.destroy"), "#destroy_modal_#{image.id}", class: 'btn btn-danger',role: "button","data-toggle" => "modal"
+
+-@images.each do |image|
+  =render 'model', image: image

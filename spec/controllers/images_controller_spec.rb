@@ -18,19 +18,19 @@ describe ImagesController do
         let(:image) { assigns(:image) }
 
         before do
-          post 'create', { id: rgyazo_id, imagedata: imagedata }
+          post 'create', { id: rgyazo_id, imagedata: imagedata , format: :cgi}
         end
 
-        it { should redirect_to(image_url(name: image.name, format: image.format)) }
+        it { response.body.should have_content(image_url(only_path: false, name: image.name, format: image.format)) }
       end
 
       context 'invalid post params' do
         before do
           ImageUploader.any_instance.stub(:origin) {}
-          post 'create', {id: rgyazo_id}
+          post 'create', {id: rgyazo_id, format: :cgi}
         end
 
-        it { should redirect_to(error_404_url) }
+        it { should redirect_to(error_404_url(format: :text)) }
       end
     end
 

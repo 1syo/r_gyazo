@@ -12,9 +12,9 @@ class ImagesController < ApplicationController
     @image = Image.new(data: @importer.origin)
 
     if @image.save
-      redirect_to image_url(name: @image.name, format: @image.format)
+      render text: image_url(only_path: false, name: @image.name, format: @image.format), layout: nil
     else
-      redirect_to error_404_url
+      redirect_to error_404_url(format: :text)
     end
   end
 

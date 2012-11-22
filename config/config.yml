@@ -1,8 +1,14 @@
 defaults: &defaults
   rgyazo_id: development
+  admin:
+    name: root
+    password: root
 development:
   <<: *defaults
 test:
   <<: *defaults
 production:
-  rgyazo_id: <%= ENV["RGYZO_ID"] %>
+  rgyazo_id: <%= ENV["RGYAZO_ID"] %>
+  admin:
+    name: <%= ENV["RGYAZO_ADMIN_NAME"] %>
+    password: <%= ENV["RGYAZO_ADMIN_PASSWORD"] %>
