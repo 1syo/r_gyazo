@@ -18,6 +18,7 @@ gem 'kaminari'
 gem 'quiet_assets'
 gem 'dbname', :git => 'git://github.com/1syo/dbname.git'
 gem 'configatron'
+gem 'rails-i18n'
 
 group :production do
   gem 'thin'
