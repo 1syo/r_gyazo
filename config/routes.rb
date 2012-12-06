@@ -5,4 +5,5 @@ RGyazo::Application.routes.draw do
   get "403", :to => "index#error_403", as: :error_403
   match ":name.:format", :to => "images#show", as: :image
   root :to => "admin#index"
+  match '*a(.:format)', :to => 'index#error_404'
 end
