@@ -13,4 +13,4 @@
         %td=link_to t("helpers.submit.destroy"), "#destroy_modal_#{image.id}", class: 'btn btn-danger',role: "button","data-toggle" => "modal"
 
 -@images.each do |image|
-  =render 'model', image: image
+  =render 'modal', image: image
