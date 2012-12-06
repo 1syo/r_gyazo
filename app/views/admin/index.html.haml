@@ -10,7 +10,19 @@
       %tr
         %td=link_to nil,image_path(only_path: false, name: image.name, format: image.format)
         %td=l image.created_at
-        %td=link_to t("helpers.submit.destroy"), "#destroy_modal_#{image.id}", class: 'btn btn-danger',role: "button","data-toggle" => "modal"
+        %td=link_to t('helpers.submit.destroy'),
+                '#',
+                'data-image-url' => image_path(only_path: false, name: image.name, format: image.format),
+                'data-delete-url' => admin_path(image),
+                'class' => 'btn btn-danger destroy-modal',
+                'role' => 'button'
 
--@images.each do |image|
-  =render 'modal', image: image
+%div#destroy-modal.modal.hide.fade
+  .modal-header
+    %button.close{'type'=>'button', 'data-dismiss'=>:modal, 'aria-hidden'=>true} &times;
+    %h3=t('views.messages.confirm')
+  .modal-body
+    %p#image-url
+  .modal-footer
+    =link_to 'Close', '#', class: 'btn', 'data-dismiss'=>:modal, 'aria-hidden'=>true
+    =link_to t('helpers.submit.destroy'), '#', method: :delete, class: 'btn btn-danger', id: 'delete-url'
