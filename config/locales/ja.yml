@@ -12,3 +12,4 @@ ja:
       confirm: 確認
     messages:
       confirm: 本当に削除しますか?
+      destroy: 削除しました

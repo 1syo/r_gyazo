@@ -12,3 +12,4 @@ en:
       confirm: confirm
     messages:
       confirm: Are you sure?
+      destroy: Destroy succeed

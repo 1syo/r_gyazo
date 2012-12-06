@@ -8,7 +8,7 @@ class AdminController < ApplicationController
 
   def destroy
     @image.destroy
-    redirect_to admin_index_url, notice: 'destroy sucess'
+    redirect_to admin_index_url, notice: t('views.messages.destroy')
   end
 
   private
