@@ -1,6 +1,8 @@
 == RGyaso
 
 {<img src="https://secure.travis-ci.org/1syo/r_gyazo.png?branch=master" alt="Build Status" />}[https://travis-ci.org/1syo/r_gyazo]
+{<img src="https://gemnasium.com/1syo/r_gyazo.png" alt="Dependency Status" />}[https://gemnasium.com/1syo/r_gyazo]
+{<img src="https://codeclimate.com/badge.png" />}[https://codeclimate.com/github/1syo/r_gyazo]
 
 == Getting Started
 
