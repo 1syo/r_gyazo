@@ -14,7 +14,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer', :platforms => :ruby
+  #gem 'therubyracer', :platforms => :ruby
   gem 'uglifier', '>= 1.0.3'
   gem 'bootstrap-sass', :git => "git://github.com/machida/bootstrap-sass.git", branch: 'master'
 end
@@ -28,11 +28,12 @@ group :test, :production do
 end
 
 group :test, :development do
-  gem 'execjs'
   gem 'sqlite3'
   gem 'forgery'
   gem 'capybara'
   gem 'capybara-webkit'
+  gem 'launchy'
+  gem 'headless'
   gem 'database_cleaner'
   gem 'factory_girl'
   gem 'factory_girl_rails'
