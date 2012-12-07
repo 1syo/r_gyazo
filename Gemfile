@@ -1,6 +1,13 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.9'
+gem 'jquery-rails'
+gem 'haml-rails'
+gem 'kaminari'
+gem 'quiet_assets'
+gem 'dbname', :git => 'git://github.com/1syo/dbname.git'
+gem 'configatron'
+gem 'rails-i18n'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -12,23 +19,20 @@ group :assets do
   gem 'bootstrap-sass', :git => "git://github.com/machida/bootstrap-sass.git", branch: 'master'
 end
 
-gem 'jquery-rails'
-gem 'haml-rails'
-gem 'kaminari'
-gem 'quiet_assets'
-gem 'dbname', :git => 'git://github.com/1syo/dbname.git'
-gem 'configatron'
-gem 'rails-i18n'
-
 group :production do
   gem 'thin'
+end
+
+group :test, :production do
   gem 'pg'
 end
 
 group :test, :development do
+  gem 'execjs'
   gem 'sqlite3'
   gem 'forgery'
   gem 'capybara'
+  gem 'capybara-webkit'
   gem 'database_cleaner'
   gem 'factory_girl'
   gem 'factory_girl_rails'
@@ -39,4 +43,3 @@ group :test, :development do
   gem 'pry-nav'
   gem 'pry-coolline'
 end
-
