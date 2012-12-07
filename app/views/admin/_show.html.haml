@@ -1,0 +1,8 @@
+%div#show.modal.hide.fade
+  .modal-header
+    %button.close{'type'=>'button', 'data-dismiss'=>:modal, 'aria-hidden'=>true} &times;
+    %h3#show-image-url
+  .modal-body
+    =image_tag '#', id: 'show-image-src'
+  .modal-footer
+    =link_to 'Close', '#', class: 'btn', 'data-dismiss'=>:modal, 'aria-hidden'=>true

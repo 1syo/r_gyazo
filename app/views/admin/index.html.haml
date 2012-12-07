@@ -8,32 +8,14 @@
   %tbody
     -@images.each do |image|
       %tr
-        %td=link_to image_path(only_path: false, name: image.name, format: image.format), '#', 'class' => 'show-modal'
+        %td=link_to image_path(only_path: false, name: image.name, format: image.format), '#', 'class' => 'show'
         %td=l image.created_at
         %td=link_to t('helpers.submit.destroy'),
                 '#',
                 'data-image-src' => image_path(only_path: false, name: image.name, format: image.format),
                 'data-delete-url' => admin_path(image),
-                'class' => 'btn btn-danger confirm-modal',
+                'class' => 'btn btn-danger confirm',
                 'role' => 'button'
 
-/=paginate @images
-
-%div#confirm-modal.modal.hide.fade
-  .modal-header
-    %button.close{'type'=>'button', 'data-dismiss'=>:modal, 'aria-hidden'=>true} &times;
-    %h3=t('views.messages.confirm')
-  .modal-body
-    =image_tag '#', id: 'confirm-image-src'
-  .modal-footer
-    =link_to 'Close', '#', class: 'btn', 'data-dismiss'=>:modal, 'aria-hidden'=>true
-    =link_to t('helpers.submit.destroy'), '#', method: :delete, class: 'btn btn-danger', id: 'delete-url'
-
-%div#show-modal.modal.hide.fade
-  .modal-header
-    %button.close{'type'=>'button', 'data-dismiss'=>:modal, 'aria-hidden'=>true} &times;
-    %h3#show-image-url
-  .modal-body
-    =image_tag '#', id: 'show-image-src'
-  .modal-footer
-    =link_to 'Close', '#', class: 'btn', 'data-dismiss'=>:modal, 'aria-hidden'=>true
+=render 'confirm'
+=render 'show'

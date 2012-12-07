@@ -1,0 +1,9 @@
+%div#confirm.modal.hide.fade
+  .modal-header
+    %button.close{'type'=>'button', 'data-dismiss'=>:modal, 'aria-hidden'=>true} &times;
+    %h3=t('views.messages.confirm')
+  .modal-body
+    =image_tag '#', id: 'confirm-image-src'
+  .modal-footer
+    =link_to 'Close', '#', class: 'btn', 'data-dismiss'=>:modal, 'aria-hidden'=>true
+    =link_to t('helpers.submit.destroy'), '#', method: :delete, class: 'btn btn-danger', id: 'delete-url'
