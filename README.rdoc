@@ -4,5 +4,43 @@
 {<img src="https://gemnasium.com/1syo/r_gyazo.png" alt="Dependency Status" />}[https://gemnasium.com/1syo/r_gyazo]
 {<img src="https://codeclimate.com/badge.png" />}[https://codeclimate.com/github/1syo/r_gyazo]
 
-== Getting Started
+RGyazo is Gyazo clone. implements by Ruby on Rails.
 
+== Instration Gyazo Server
+
+=== Setup Heroku
+
+  heroku create YOUR_APP_NAME
+  heroku addons:add heroku-postgresql:dev
+
+=== Config Application
+
+  heroku config:set RGYAZO_ID=RANDAM_STRING (e.g es8eeL8e)
+  heroku config:set RGYAZO_ADMIN_NAME=YOUR_ADDMIN_NAME (e.g. admin)
+  heroku config:set RGYAZO_ADMIN_PASSWORD=YOUR_ADMIN_PASSWORD (e.g. oGh1eech)
+
+
+RGYAZO_ADMIN_NAME and RGYAZO_ADMIN_PASSWORD is admin tools account.
+
+=== Install Heroku
+
+  git remote add heroku YOUR_APP_GIT_URL
+  git push heroku master
+
+== Installation Gyazo Client
+
+=== Install Gyazo
+
+install your platform {gyazo}[http://gyazo.com/]
+
+=== Setup Gyazo
+
+  $ mkdir ~/Library/Gyazo
+  $ heroku config:get RGYAZO_ID > ~/Library/Gyazo/id
+
+===  Fix Gyazo HOST
+
+  /Applications/Gyazo.app/Contents/Resources/script 
+
+  -HOST = 'gyazo.com'
+  +HOST = 'YOUR_HEROKU_HOST'
