@@ -2,7 +2,7 @@ require 'spec_helper'
 
 shared_context "set up image url" do
   let(:host) { '127.0.0.1' }
-  let(:port) { page.driver.server_port }
+  let(:port) { page.server.port }
   let(:text) do
     image_path(only_path: false, host: host, port: port, name: images.first.name, format: images.first.format)
   end
