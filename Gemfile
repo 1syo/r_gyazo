@@ -9,6 +9,7 @@ gem 'dbname', :git => 'git://github.com/1syo/dbname.git'
 gem 'configatron'
 gem 'rails-i18n'
 gem 'newrelic_rpm'
+gem 'rack-health', :require => 'rack/health'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

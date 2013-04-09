@@ -25,5 +25,6 @@ module RGyazo
     config.assets.enabled = true
     config.assets.version = '1.0'
     configatron.configure_from_hash(YAML.load(ERB.new(File.read("#{Rails.root}/config/config.yml")).result)[Rails.env])
+    config.middleware.use Rack::Health, path: '/healthy'
   end
 end
