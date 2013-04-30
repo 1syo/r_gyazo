@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby "2.0.0"
+
 gem 'rails', '4.0.0.rc1'
 
 gem 'jquery-rails'
@@ -46,5 +48,5 @@ group :test, :development do
   gem 'pry'
   gem 'pry-rails'
   gem 'pry-nav'
-  gem 'pry-coolline'
+  #gem 'pry-coolline'
 end
