@@ -7,6 +7,13 @@ GIT
       rails (>= 3.0.0)
 
 GIT
+  remote: git://github.com/1syo/yaml-erb.git
+  revision: d5aacac7c01cbafcd3cb3928924a16cc89892383
+  tag: v0.0.1
+  specs:
+    yaml-erb (0.0.1)
+
+GIT
   remote: git://github.com/bmabey/database_cleaner.git
   revision: 20136e8987c222013d96e07c27d1230d2bbebd61
   specs:
@@ -258,3 +265,4 @@ DEPENDENCIES
   sqlite3
   thin
   uglifier (>= 1.0.3)
+  yaml-erb!
