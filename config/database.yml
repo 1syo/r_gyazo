@@ -12,7 +12,7 @@ postgresql: &postgresql
   <<: *defaults
   adapter: postgresql
   encoding: unicode
-  database: rgyazo_test
+  database: <%= Dbname.env[:test] %>
   host: localhost
   username: postgres
   password:
