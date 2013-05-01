@@ -82,8 +82,15 @@ GEM
       execjs
     coffee-script-source (1.6.2)
     colored (1.2)
+    colorize (0.5.8)
     configatron (2.10.0)
       yamler (>= 0.1.0)
+    coveralls (0.6.7)
+      colorize
+      multi_json (~> 1.3)
+      rest-client
+      simplecov (>= 0.7)
+      thor
     daemons (1.1.9)
     diff-lcs (1.2.4)
     erubis (2.7.0)
@@ -174,6 +181,8 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.0.4)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     rspec-core (2.13.1)
     rspec-expectations (2.13.0)
       diff-lcs (>= 1.1.3, < 2.0)
@@ -199,6 +208,10 @@ GEM
       rubyzip
       websocket (~> 1.0.4)
     sexp_processor (4.2.1)
+    simplecov (0.7.1)
+      multi_json (~> 1.0)
+      simplecov-html (~> 0.7.1)
+    simplecov-html (0.7.1)
     slop (3.4.4)
     sprockets (2.9.3)
       hike (~> 1.2)
@@ -239,6 +252,7 @@ DEPENDENCIES
   capybara-webkit
   coffee-rails (~> 4.0.0.beta1)
   configatron
+  coveralls
   database_cleaner!
   dbname!
   factory_girl
