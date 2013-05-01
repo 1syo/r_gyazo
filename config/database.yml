@@ -1,24 +1,21 @@
-defaults: &defaults
+sqlite: &sqlite
   adapter: sqlite3
   encoding: unicode
   pool: 5
   timeout: 5000
-
-sqlite: &sqlite
-  <<: *defaults
   database: db/<%= Dbname.env[:test] %>.sqlite3
 
 postgresql: &postgresql
-  <<: *defaults
   adapter: postgresql
   encoding: unicode
+  pool: 5
   database: <%= Dbname.env[:test] %>
   host: localhost
   username: postgres
   password:
 
 development:
-  <<: *defaults
+  <<: *sqlite
   database: db/<%= Dbname.env[:development] %>.sqlite3
 
 test:
