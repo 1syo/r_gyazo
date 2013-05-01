@@ -4,7 +4,11 @@ ruby "2.0.0"
 
 gem 'rails', '4.0.0.rc1'
 
+gem 'sass-rails', '~> 4.0.0.rc1'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
+
 gem 'haml-rails'
 gem 'kaminari'
 gem 'quiet_assets'
@@ -15,16 +19,7 @@ gem 'newrelic_rpm'
 gem 'rack-health', require: 'rack/health'
 gem 'protected_attributes'
 gem 'yaml-erb', require: 'yaml/erb', github: '1syo/yaml-erb', tag: 'v0.0.1'
-
-group :assets do
-  gem 'sass-rails', '~> 4.0.0.beta1'
-  gem 'coffee-rails', '~> 4.0.0.beta1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  #gem 'therubyracer', :platforms => :ruby
-  gem 'uglifier', '>= 1.0.3'
-  gem 'bootstrap-sass', github: 'machida/bootstrap-sass', branch: 'master'
-end
+gem 'bootstrap-sass', github: 'machida/bootstrap-sass', branch: 'master'
 
 group :production do
   gem 'thin'
