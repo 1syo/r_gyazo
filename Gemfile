@@ -41,7 +41,7 @@ group :test, :development do
   gem 'capybara-webkit'
   gem 'launchy'
   gem 'headless'
-  gem 'database_cleaner', github: 'bmabey/database_cleaner'
+  gem 'database_cleaner', github: 'bmabey/database_cleaner', tag: 'v1.0.0.RC1'
   gem 'factory_girl'
   gem 'factory_girl_rails'
   gem 'rspec-rails'
