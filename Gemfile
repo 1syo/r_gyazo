@@ -49,6 +49,6 @@ group :test, :development do
   gem 'pry'
   gem 'pry-rails'
   gem 'pry-nav'
-  #gem 'pry-coolline'
   gem 'coveralls', require: false
+  gem 'pry-coolline', github: 'pry/pry-coolline'
 end

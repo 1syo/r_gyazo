@@ -8,14 +8,14 @@ GIT
 
 GIT
   remote: git://github.com/1syo/yaml-erb.git
-  revision: d5aacac7c01cbafcd3cb3928924a16cc89892383
+  revision: d830e936472c50072b8e3572dd9a3725ffacf398
   tag: v0.0.1
   specs:
     yaml-erb (0.0.1)
 
 GIT
   remote: git://github.com/bmabey/database_cleaner.git
-  revision: 20136e8987c222013d96e07c27d1230d2bbebd61
+  revision: c34b4e4deada99c17b2470dddead1906355bad5f
   specs:
     database_cleaner (0.9.1)
 
@@ -26,6 +26,13 @@ GIT
   specs:
     bootstrap-sass (2.2.2.0)
       sass (~> 3.2)
+
+GIT
+  remote: git://github.com/pry/pry-coolline.git
+  revision: 206421fb67cecb7212ffd1c5592a6afbc9d0ac19
+  specs:
+    pry-coolline (0.1.4)
+      coolline (~> 0.4.0)
 
 GEM
   remote: https://rubygems.org/
@@ -85,6 +92,7 @@ GEM
     colorize (0.5.8)
     configatron (2.10.0)
       yamler (>= 0.1.0)
+    coolline (0.4.2)
     coveralls (0.6.7)
       colorize
       multi_json (~> 1.3)
@@ -267,6 +275,7 @@ DEPENDENCIES
   pg
   protected_attributes
   pry
+  pry-coolline!
   pry-nav
   pry-rails
   quiet_assets
