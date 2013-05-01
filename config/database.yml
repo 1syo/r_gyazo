@@ -4,13 +4,25 @@ defaults: &defaults
   pool: 5
   timeout: 5000
 
+sqlite: &sqlite
+  <<: *defaults
+  database: db/<%= Dbname.env[:test] %>.sqlite3
+
+postgresql: &postgresql
+  <<: *defaults
+  adapter: postgresql
+  encoding: unicode
+  database: rgyazo_test
+  host: localhost
+  username: postgres
+  password:
+
 development:
   <<: *defaults
   database: db/<%= Dbname.env[:development] %>.sqlite3
 
 test:
-  <<: *defaults
-  database: db/<%= Dbname.env[:test] %>.sqlite3
+  <<: *<%= ENV['DB'] || "sqlite" %>
 
 production:
   adapter: postgresql

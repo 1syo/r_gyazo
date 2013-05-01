@@ -28,14 +28,18 @@ end
 
 group :production do
   gem 'thin'
-end
-
-group :test, :production do
   gem 'pg'
 end
 
+group :test do
+  if ENV['DB'] == "postgresql"
+    gem 'pg'
+  else
+    gem 'sqlite3'
+  end
+end
+
 group :test, :development do
-  gem 'sqlite3'
   gem 'forgery'
   gem 'capybara', '~> 2.0.3'
   gem 'capybara-webkit'
