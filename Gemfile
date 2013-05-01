@@ -8,12 +8,13 @@ gem 'jquery-rails'
 gem 'haml-rails'
 gem 'kaminari'
 gem 'quiet_assets'
-gem 'dbname', git: 'git://github.com/1syo/dbname.git'
+gem 'dbname', github: '1syo/dbname'
 gem 'configatron'
 gem 'rails-i18n'
 gem 'newrelic_rpm'
-gem 'rack-health', :require => 'rack/health'
+gem 'rack-health', require: 'rack/health'
 gem 'protected_attributes'
+gem 'yaml-erb', require: 'yaml/erb', github: '1syo/yaml-erb', tag: 'v0.0.1'
 
 group :assets do
   gem 'sass-rails', '~> 4.0.0.beta1'
@@ -22,7 +23,7 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   #gem 'therubyracer', :platforms => :ruby
   gem 'uglifier', '>= 1.0.3'
-  gem 'bootstrap-sass', git: "git://github.com/machida/bootstrap-sass.git", branch: 'master'
+  gem 'bootstrap-sass', github: 'machida/bootstrap-sass', branch: 'master'
 end
 
 group :production do
@@ -40,7 +41,7 @@ group :test, :development do
   gem 'capybara-webkit'
   gem 'launchy'
   gem 'headless'
-  gem 'database_cleaner', git: 'git://github.com/bmabey/database_cleaner.git'
+  gem 'database_cleaner', github: 'bmabey/database_cleaner'
   gem 'factory_girl'
   gem 'factory_girl_rails'
   gem 'rspec-rails'
