@@ -4,6 +4,7 @@
 {<img src="https://gemnasium.com/1syo/r_gyazo.png" alt="Dependency Status" />}[https://gemnasium.com/1syo/r_gyazo]
 {<img src="https://codeclimate.com/github/1syo/r_gyazo.png" />}[https://codeclimate.com/github/1syo/r_gyazo]
 {<img src="https://coveralls.io/repos/1syo/r_gyazo/badge.png?branch=master" alt="Coverage Status" />}[https://coveralls.io/r/1syo/r_gyazo]
+{<img src="http://rails-brakeman.com/1syo/r_gyazo.png" alt="Brakeman" />}[http://rails-brakeman.com/1syo/r_gyazo]
 
 RGyazo is Gyazo clone. implements by Ruby on Rails.
 
