@@ -50,4 +50,5 @@ group :test, :development do
   gem 'pry-nav'
   gem 'coveralls', require: false
   gem 'pry-coolline', github: 'pry/pry-coolline'
+  gem 'brakeman', require: false
 end
