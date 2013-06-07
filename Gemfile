@@ -4,6 +4,7 @@ ruby "2.0.0"
 
 gem 'rails', '4.0.0.rc1'
 
+gem 'devise', github: 'plataformatec/devise'
 gem 'sass-rails', '~> 4.0.0.rc1'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
@@ -20,7 +21,6 @@ gem 'rack-health', require: 'rack/health'
 gem 'protected_attributes'
 gem 'yaml-erb', require: 'yaml/erb', github: '1syo/yaml-erb', tag: 'v0.0.1'
 gem 'bootstrap-sass', github: 'machida/bootstrap-sass', branch: 'master'
-gem 'devise'
 gem 'rails_admin', github: 'sferik/rails_admin', branch: 'rails-4'
 
 group :production do

@@ -13,10 +13,10 @@ RailsAdmin.config do |config|
 
   # RailsAdmin may need a way to know who the current user is]
   config.current_user_method { current_administrator } # auto-generated
-  config.authenticate_with { }
+  config.authenticate_with { authenticate_administrator! }
 
   # If you want to track changes on your models:
-  # config.audit_with :history, 'Administrator'
+  config.audit_with :history, 'Administrator'
 
   # Or with a PaperTrail: (you need to install it first)
   # config.audit_with :paper_trail, 'Administrator'

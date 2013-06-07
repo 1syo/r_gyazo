@@ -29,6 +29,16 @@ GIT
       sass (~> 3.2)
 
 GIT
+  remote: git://github.com/plataformatec/devise.git
+  revision: 176158a3094d1acce229c10173992a97f298049a
+  specs:
+    devise (3.0.0.rc)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      warden (~> 1.2.1)
+
+GIT
   remote: git://github.com/pry/pry-coolline.git
   revision: 4415462137aa447983cc53d66aa04efe44ac53dd
   specs:
@@ -134,10 +144,6 @@ GEM
       simplecov (>= 0.7)
       thor
     daemons (1.1.9)
-    devise (1.5.4)
-      bcrypt-ruby (~> 3.0)
-      orm_adapter (~> 0.0.3)
-      warden (~> 1.1)
     diff-lcs (1.2.4)
     erubis (2.7.0)
     eventmachine (1.0.3)
@@ -190,7 +196,7 @@ GEM
     nested_form (0.3.2)
     newrelic_rpm (3.6.3.106)
     nokogiri (1.5.9)
-    orm_adapter (0.0.7)
+    orm_adapter (0.4.0)
     pg (0.15.1)
     polyglot (0.3.3)
     posix-spawn (0.3.6)
@@ -327,7 +333,7 @@ DEPENDENCIES
   coveralls
   database_cleaner!
   dbname!
-  devise
+  devise!
   factory_girl
   factory_girl_rails
   forgery
