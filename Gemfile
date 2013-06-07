@@ -20,6 +20,7 @@ gem 'rack-health', require: 'rack/health'
 gem 'protected_attributes'
 gem 'yaml-erb', require: 'yaml/erb', github: '1syo/yaml-erb', tag: 'v0.0.1'
 gem 'bootstrap-sass', github: 'machida/bootstrap-sass', branch: 'master'
+gem 'devise'
 
 group :production do
   gem 'thin'
