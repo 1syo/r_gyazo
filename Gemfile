@@ -21,6 +21,7 @@ gem 'protected_attributes'
 gem 'yaml-erb', require: 'yaml/erb', github: '1syo/yaml-erb', tag: 'v0.0.1'
 gem 'bootstrap-sass', github: 'machida/bootstrap-sass', branch: 'master'
 gem 'devise'
+gem 'rails_admin', github: 'sferik/rails_admin', branch: 'rails-4'
 
 group :production do
   gem 'thin'
@@ -45,11 +46,11 @@ group :test, :development do
   gem 'factory_girl'
   gem 'factory_girl_rails'
   gem 'rspec-rails'
-  gem 'rails_best_practices', '>= 1.2.0', require: false
   gem 'pry'
   gem 'pry-rails'
   gem 'pry-nav'
   gem 'coveralls', require: false
   gem 'pry-coolline', github: 'pry/pry-coolline'
+  gem 'rails_best_practices', '>= 1.2.0', require: false
   gem 'brakeman', require: false
 end

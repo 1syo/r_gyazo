@@ -1,4 +1,5 @@
 RGyazo::Application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   devise_for :administrators
   resources :admin, only: [:index, :destroy]
   post "upload.cgi" => "images#create", as: :images
