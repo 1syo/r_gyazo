@@ -1,4 +1,5 @@
 RGyazo::Application.routes.draw do
+  devise_for :administrators
   resources :admin, only: [:index, :destroy]
   post "upload.cgi" => "images#create", as: :images
   get "404", :to => "index#error_404", as: :error_404
