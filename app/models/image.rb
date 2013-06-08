@@ -16,6 +16,10 @@ class Image < ActiveRecord::Base
     'png'
   end
 
+  def image_path
+    image_path(only_path: false, name: self.name, format: self.format)
+  end
+
   private
   def generate_name
     begin
@@ -26,9 +30,13 @@ class Image < ActiveRecord::Base
   end
 
   rails_admin do 
-     list do
-       field :name
-       field :created_at
-     end
+    list do
+      field :name do
+        formatted_value do
+#          bindings[:view].link_to(bindings[:controller].main_app.image_path(only_path: false, name: bindings[:object].name, format: bindings[:object].format))
+        end
+      end
+      field :created_at
+    end
   end
 end
