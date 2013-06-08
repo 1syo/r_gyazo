@@ -1,0 +1,22 @@
+.container
+  .hero-unit
+    .row-fluid
+      .span9{style:'border-right:1px solid #ddd'}
+        %h2 Your own Gyazo clone
+        %h1 RGyazo Admin
+        %p{style: 'margin-top:1em'}
+          Please enter your email and password.
+      .span3
+        =form_for resource, as: resource_name, url: session_path(resource_name) do |f|
+          .control-group
+            .controls
+              =f.email_field :email, autofocus: true, placeholder: 'email'
+
+          .control-group
+            .controls
+              =f.password_field :password, placeholder: 'password'
+
+          .control-group
+            .controls
+              =f.label :remember_me, raw("#{f.check_box(:remember_me)} Remember Me"), class: :checkbox
+              =f.submit "Sign in", class: 'btn btn-success'
