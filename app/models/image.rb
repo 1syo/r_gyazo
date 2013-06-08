@@ -24,4 +24,11 @@ class Image < ActiveRecord::Base
 
     name
   end
+
+  rails_admin do 
+     list do
+       field :name
+       field :created_at
+     end
+  end
 end

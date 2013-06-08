@@ -46,6 +46,15 @@ GIT
       coolline (~> 0.4.0)
 
 GIT
+  remote: git://github.com/rails/sass-rails.git
+  revision: 33799418f104c961b1ce41452e77cf1e04930755
+  specs:
+    sass-rails (4.0.0.rc1)
+      railties (>= 4.0.0.beta, < 5.0)
+      sass (>= 3.1.10)
+      sprockets-rails (~> 2.0.0.rc4)
+
+GIT
   remote: git://github.com/sferik/rails_admin.git
   revision: 18db7a807c7d3645050f94abeee3e85003ed910f
   branch: rails-4
@@ -267,11 +276,6 @@ GEM
     rubyzip (0.9.9)
     safe_yaml (0.9.3)
     sass (3.2.9)
-    sass-rails (4.0.0.rc1)
-      railties (>= 4.0.0.beta, < 5.0)
-      sass (>= 3.1.10)
-      sprockets-rails (~> 2.0.0.rc0)
-      tilt (~> 1.3)
     selenium-webdriver (2.33.0)
       childprocess (>= 0.2.5)
       multi_json (~> 1.0)
@@ -356,7 +360,7 @@ DEPENDENCIES
   rails_admin!
   rails_best_practices (>= 1.2.0)
   rspec-rails
-  sass-rails (~> 4.0.0.rc1)
+  sass-rails!
   sqlite3
   thin
   uglifier (>= 1.3.0)
