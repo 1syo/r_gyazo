@@ -5,7 +5,7 @@ ActiveAdmin.setup do |config|
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
   #
-  config.site_title = "R Gyazo"
+  config.site_title = "RGyazo::Admin"
 
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
@@ -101,10 +101,10 @@ ActiveAdmin.setup do |config|
   # This allows your users to comment on any resource registered with Active Admin.
   #
   # You can completely disable comments:
-  # config.allow_comments = false
+  config.allow_comments = false
   #
   # You can disable the menu item for the comments index page:
-  # config.show_comments_in_menu = false
+  config.show_comments_in_menu = false
   #
   # You can change the name under which comments are registered:
   # config.comments_registration_name = 'AdminComment'
@@ -114,7 +114,7 @@ ActiveAdmin.setup do |config|
   #
   # Enable and disable Batch Actions
   #
-  config.batch_actions = true
+  #config.batch_actions = true
 
 
   # == Controller Filters
@@ -195,7 +195,7 @@ ActiveAdmin.setup do |config|
   # Pagination is enabled by default for all resources.
   # You can control the default per page count for all resources here.
   #
-  # config.default_per_page = 30
+  #config.default_per_page = 30 
 
 
   # == Filters

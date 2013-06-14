@@ -21,6 +21,8 @@ gem 'protected_attributes'
 gem 'yaml-erb', require: 'yaml/erb', github: '1syo/yaml-erb', tag: 'v0.0.1'
 gem 'bootstrap-sass', github: 'machida/bootstrap-sass', branch: 'master'
 
+#gem 'jquery-ui-rails'
+gem "formtastic", github: "justinfrench/formtastic"
 gem 'devise', github: 'plataformatec/devise', branch: 'rails4'
 gem 'ransack', github: 'ernie/ransack', branch: 'rails-4'
 gem 'activeadmin', github: 'agrobbin/active_admin', branch: 'rails-4'
